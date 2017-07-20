@@ -40,7 +40,7 @@ title: welcome
 
 
 	<h2>Site</h2>
-	<pre>site: {{ site | jsonify }}</pre>
+	<pre>site: <script>document.write(JSON.stringify({{ site | jsonify }},null,2))</script></pre>
 	<pre>site.time: {{ site.time }}</pre>
 	<pre>site.pages:</pre>
 	<ul>
@@ -70,14 +70,7 @@ title: welcome
 		{% endfor %}
 	</ul>
 
-	<pre>site.static_files: {{ site.static_files }}</pre>
-	<ul>
-		{% for file in site.static_files %}
-		<li>
-			<pre>{{ file | jsonify }}</pre>
-		</li>
-		{% endfor %}
-	</ul>
+	<pre>site.static_files: {{ site.static_files | jsonify }}</pre>
 
 
 	<pre>site.html_pages:</pre>
