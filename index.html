@@ -43,6 +43,7 @@ title: welcome
 	<pre>site: <script type="text/javascript">
 		var json = ({{ site | jsonify }});
 		delete json.pages;
+		delete json.html_pages;
 		document.write(JSON.stringify(json));
 	</script></pre>
 	<pre>site.time: {{ site.time }}</pre>
