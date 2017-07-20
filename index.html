@@ -74,7 +74,7 @@ title: welcome
 	<ul>
 		{% for file in site.static_files %}
 		<li>
-			<a href="{{ file.url }}">{{ file.title }}</a>
+			<pre>{{ file | jsonify }}</pre>
 		</li>
 		{% endfor %}
 	</ul>
