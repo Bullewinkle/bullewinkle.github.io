@@ -37,13 +37,10 @@ title: welcome
 	<ul>
 	{% for page in site.pages %}
 		<li>
-			<pre>{{ page }}</pre>
+			<a href="{{ page.url }}">{{ page.title }}</a>
 		</li>
 	{% endfor %}
 	</ul>
-
-
-
 
 
 </body>
