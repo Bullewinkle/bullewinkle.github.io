@@ -32,37 +32,23 @@ title: welcome
 	<pre>site: {{ site }}</pre>
 	<pre>site.time: {{ site.time }}</pre>
 	<pre>site.pages: site.pages</pre>
-	<pre>site.posts: site.posts</pre>
-	<pre>site.related_posts: {{ site.related_posts }}</pre>
-	<pre>site.static_files: {{ site.static_files }}</pre>
-	<pre>site.html_pages: {{ site.html_pages }}</pre>
-	<pre>site.html_files: {{ site.html_files }}</pre>
-	<pre>site.collections: {{ site.collections }}</pre>
-	<pre>site.data: {{ site.data }}</pre>
-	<pre>site.documents: {{ site.documents }}</pre>
-	<pre>site.categories.CATEGORY: {{ site.categories.CATEGORY }}</pre>
-	<pre>site.tags.TAG: {{ site.tags.TAG }}</pre>
-	<pre>site.[CONFIGURATION_DATA]: {{ site.[CONFIGURATION_DATA] }}</pre>
 
 
-	<h2>Paginator</h2>
-	<pre>paginator.per_page: {{ paginator.per_page }}</pre>
-	<pre>paginator.posts: {{ paginator.posts }}</pre>
-	<pre>paginator.total_posts: {{ paginator.total_posts }}</pre>
-	<pre>paginator.total_pages: {{ paginator.total_pages }}</pre>
-	<pre>paginator.page: {{ paginator.page }}</pre>
-	<pre>paginator.previous_page: {{ paginator.previous_page }}</pre>
-	<pre>paginator.previous_page_path: {{ paginator.previous_page_path }}</pre>
-	<pre>paginator.next_page: {{ paginator.next_page }}</pre>
-	<pre>paginator.next_page_path: {{ paginator.next_page_path }}</pre>
+	<ul>
+		<li>
+			{% for album in site.pages %}
+			<h3>{{ album.title }}</h3>
+			<pre>album.artist: {{ album.artist }}</pre>
+			<pre>album.director: {{ album.director }}</pre>
+			<pre>album.director: {{ album.director }}</pre>
+
+			{% endfor %}
+
+		</li>
+	</ul>
 
 
-	<h2>Layout</h2>
-	<pre>layout: {{ layout }}</pre>
 
-
-	<h2>Content</h2>
-	<pre>content: {{ content }}</pre>
 
 
 </body>
