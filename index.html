@@ -33,11 +33,6 @@ title: welcome
 	<pre>site: {{ site }}</pre>
 	<pre>site.time: {{ site.time }}</pre>
 	<pre>site.pages: site.pages</pre>
-
-	<h2>Site.github</h2>
-	<pre>site.github: {{ site.github }}</pre>
-	<script>window.github = {{ site.github }} </script>
-
 	<ul>
 	{% for page in site.pages %}
 		<li>
@@ -45,6 +40,19 @@ title: welcome
 		</li>
 	{% endfor %}
 	</ul>
+
+	<h2>Site.github</h2>
+	<pre>site.github: {{ site.github }}</pre>
+	<script>window.github = {{ site.github }} </script>
+	<ul>
+		{% for repo in site.github.public_repositories %}
+		<li>
+			<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+
 
 
 </body>
