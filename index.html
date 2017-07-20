@@ -35,16 +35,14 @@ title: welcome
 
 
 	<ul>
+	{% for album in site.pages %}
 		<li>
-			{% for album in site.pages %}
 			<h3>{{ album.title }}</h3>
 			<pre>album.artist: {{ album.artist }}</pre>
 			<pre>album.director: {{ album.director }}</pre>
 			<pre>album.director: {{ album.director }}</pre>
-
-			{% endfor %}
-
 		</li>
+	{% endfor %}
 	</ul>
 
 
