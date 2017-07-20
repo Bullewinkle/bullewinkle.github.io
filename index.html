@@ -28,6 +28,17 @@ title: welcome
 	<pre>page.previous: {{ page.previous }}</pre>
 
 
+	<h2>Site.github</h2>
+	<script>window.github = {{ site.github }} </script>
+	<ul>
+		{% for repo in site.github.public_repositories %}
+		<li>
+			<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+
 	<h2>Site</h2>
 	<pre>site: {{ site }}</pre>
 	<pre>site.time: {{ site.time }}</pre>
@@ -121,16 +132,6 @@ title: welcome
 	<pre>paginator.next_page: {{ paginator.next_page }}</pre>
 	<pre>paginator.next_page_path: {{ paginator.next_page_path }}</pre>
 
-
-	<h2>Site.github</h2>
-	<script>window.github = {{ site.github }} </script>
-	<ul>
-		{% for repo in site.github.public_repositories %}
-		<li>
-			<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
-		</li>
-		{% endfor %}
-	</ul>
 
 
 </body>
