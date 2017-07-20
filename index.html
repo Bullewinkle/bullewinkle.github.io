@@ -9,7 +9,6 @@ title: welcome
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 	<meta charset="UTF-8">
 	<title>DDelivery</title>
-	<link rel="stylesheet" href="{{ site.github.url }}/assets/css/style.css">
 </head>
 <body>
 
@@ -32,17 +31,98 @@ title: welcome
 	<h2>Site</h2>
 	<pre>site: {{ site }}</pre>
 	<pre>site.time: {{ site.time }}</pre>
-	<pre>site.pages: site.pages</pre>
+	<pre>site.pages:</pre>
 	<ul>
-	{% for page in site.pages %}
+		{% for page in site.pages %}
 		<li>
 			<a href="{{ page.url }}">{{ page.title }}</a>
 		</li>
-	{% endfor %}
+		{% endfor %}
 	</ul>
 
+	<pre>site.posts:</pre>
+	<ul>
+		{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+
+	<pre>site.related_posts:</pre>
+	<ul>
+		{% for related_post in site.related_posts %}
+		<li>
+			<a href="{{ related_post.url }}">{{ related_post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<pre>site.static_files: {{ site.static_files }}</pre>
+	<ul>
+		{% for file in site.static_files %}
+		<li>
+			<a href="{{ file.url }}">{{ file.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+
+	<pre>site.html_pages:</pre>
+	<ul>
+		{% for html_page in site.html_pages %}
+		<li>
+			<a href="{{ html_page.url }}">{{ html_page.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<pre>site.html_files:</pre>
+	<ul>
+		{% for html_file in site.html_files %}
+		<li>
+			<a href="{{ html_file.url }}">{{ html_file.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<pre>site.collections:</pre>
+	<ul>
+		{% for collection in site.collections %}
+		<li>
+			<a href="{{ collection.url }}">{{ collection.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<pre>site.data: {{ site.data }}</pre>
+
+	<pre>site.documents:</pre>
+	<ul>
+		{% for document in site.documents %}
+		<li>
+			<a href="{{ document.url }}">{{ document.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<pre>site.categories.CATEGORY: {{ site.categories.CATEGORY }}</pre>
+	<pre>site.tags.TAG: {{ site.tags.TAG }}</pre>
+	<pre>site.[CONFIGURATION_DATA]: {{ site.[CONFIGURATION_DATA] }}</pre>
+
+
+	<h2>Paginator</h2>
+	<pre>paginator.per_page: {{ paginator.per_page }}</pre>
+	<pre>paginator.posts: {{ paginator.posts }}</pre>
+	<pre>paginator.total_posts: {{ paginator.total_posts }}</pre>
+	<pre>paginator.total_pages: {{ paginator.total_pages }}</pre>
+	<pre>paginator.page: {{ paginator.page }}</pre>
+	<pre>paginator.previous_page: {{ paginator.previous_page }}</pre>
+	<pre>paginator.previous_page_path: {{ paginator.previous_page_path }}</pre>
+	<pre>paginator.next_page: {{ paginator.next_page }}</pre>
+	<pre>paginator.next_page_path: {{ paginator.next_page_path }}</pre>
+
+
 	<h2>Site.github</h2>
-	<pre>site.github: {{ site.github }}</pre>
 	<script>window.github = {{ site.github }} </script>
 	<ul>
 		{% for repo in site.github.public_repositories %}
@@ -51,8 +131,6 @@ title: welcome
 		</li>
 		{% endfor %}
 	</ul>
-
-
 
 
 </body>
