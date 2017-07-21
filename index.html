@@ -8,13 +8,12 @@ title: welcome
 <head lang="en">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 	<meta charset="UTF-8">
-	<title>DDelivery</title>
+	<meta name="robots" content="none"/>
+	<title>Bullwinkle`s pages</title>
 </head>
 <body>
-
-	<h1>Hi</h1>
-
-	<h2>Repositories</h2>
+	<h1></h1>
+	<h2>Pages</h2>
 	<ul>
 		{% for repo in site.github.public_repositories %}
 			{% if repo.has_pages %}
@@ -26,88 +25,88 @@ title: welcome
 	</ul>
 
 
-
-
-
-
 	<script type="text/javascript">
+
 		function getInitialData () {
-			try {
-				var page = {};
-				var site = {};
-				var paginator = {};
+			var page = {};
+			var site = {};
+			var paginator = {};
 
-				page["title"] = {{ page.title | jsonify }};
-				page["dir"] = {{ page.dir | jsonify }};
-				page["name"] = {{ page.name | jsonify }};
-				page["path"] = {{ page.path | jsonify }};
-				page["url"] = {{ page.url | jsonify }};
+			page["title"] = {{ page.title | jsonify }};
+			page["dir"] = {{ page.dir | jsonify }};
+			page["name"] = {{ page.name | jsonify }};
+			page["path"] = {{ page.path | jsonify }};
+			page["url"] = {{ page.url | jsonify }};
 
 
-				site["data"] = {{ site.data | jsonify }};
-				site["time"] = {{ site.time | jsonify }};
-				site["posts"] = {{ site.posts | jsonify }};
-				site["documents"] = {{ site.documents | jsonify }};
-				site["tags"] = {{ site.tags | jsonify }};
-				site["static_files"] = {{ site.static_files | jsonify }};
-				site["categories"] = {{ site.categories | jsonify }};
-				site["collections"] = {{ site.collections | jsonify }};
-				site["source"] = {{ site.source | jsonify }};
-				site["destination"] = {{ site.destination | jsonify }};
-				site["plugins_dir"] = {{ site.plugins_dir | jsonify }};
-				site["layouts_dir"] = {{ site.layouts_dir | jsonify }};
-				site["data_dir"] = {{ site.data_dir | jsonify }};
-				site["includes_dir"] = {{ site.includes_dir | jsonify }};
-				site["safe"] = {{ site.safe | jsonify }};
-				site["include"] = {{ site.include | jsonify }};
-				site["exclude"] = {{ site.exclude | jsonify }};
-				site["keep_files"] = {{ site.keep_files | jsonify }};
-				site["encoding"] = {{ site.encoding | jsonify }};
-				site["markdown_ext"] = {{ site.markdown_ext | jsonify }};
-				site["show_drafts"] = {{ site.show_drafts | jsonify }};
-				site["limit_posts"] = {{ site.limit_posts | jsonify }};
-				site["future"] = {{ site.future | jsonify }};
-				site["unpublished"] = {{ site.unpublished | jsonify }};
-				site["whitelist"] = {{ site.whitelist | jsonify }};
-				site["gems"] = {{ site.gems | jsonify }};
-				site["markdown"] = {{ site.markdown | jsonify }};
-				site["highlighter"] = {{ site.highlighter | jsonify }};
-				site["lsi"] = {{ site.lsi | jsonify }};
-				site["excerpt_separator"] = {{ site.excerpt_separator | jsonify }};
-				site["incremental"] = {{ site.incremental | jsonify }};
-				site["detach"] = {{ site.detach | jsonify }};
-				site["port"] = {{ site.port | jsonify }};
-				site["host"] = {{ site.host | jsonify }};
-				site["baseurl"] = {{ site.baseurl | jsonify }};
-				site["show_dir_listing"] = {{ site.show_dir_listing | jsonify }};
-				site["permalink"] = {{ site.permalink | jsonify }};
-				site["paginate_path"] = {{ site.paginate_path | jsonify }};
-				site["timezone"] = {{ site.timezone | jsonify }};
-				site["quiet"] = {{ site.quiet | jsonify }};
-				site["verbose"] = {{ site.verbose | jsonify }};
-				site["defaults"] = {{ site.defaults | jsonify }};
-				site["liquid"] = {{ site.liquid | jsonify }};
-				site["rdiscount"] = {{ site.rdiscount | jsonify }};
-				site["redcarpet"] = {{ site.redcarpet | jsonify }};
-				site["kramdown"] = {{ site.kramdown | jsonify }};
-				site["jailed"] = {{ site.jailed | jsonify }};
-				site["sass"] = {{ site.sass | jsonify }};
-				site["GH_ENV"] = {{ site.GH_ENV | jsonify }};
-				site["github"] = {{ site.github | jsonify }};
-				site["url"] = {{ site.url | jsonify }};
-				site["title"] = {{ site.title | jsonify }};
-				site["description"] = {{ site.description | jsonify }};
-				site["theme"] = {{ site.theme | jsonify }};
-				site["gist"] = {{ site.gist | jsonify }};
+			site["data"] = {{ site.data | jsonify }};
+			site["time"] = {{ site.time | jsonify }};
+			site["posts"] = {{ site.posts | jsonify }};
+			site["documents"] = {{ site.documents | jsonify }};
+			site["tags"] = {{ site.tags | jsonify }};
+			site["static_files"] = {{ site.static_files | jsonify }};
+			site["categories"] = {{ site.categories | jsonify }};
+			site["collections"] = {{ site.collections | jsonify }};
+			site["source"] = {{ site.source | jsonify }};
+			site["destination"] = {{ site.destination | jsonify }};
+			site["plugins_dir"] = {{ site.plugins_dir | jsonify }};
+			site["layouts_dir"] = {{ site.layouts_dir | jsonify }};
+			site["data_dir"] = {{ site.data_dir | jsonify }};
+			site["includes_dir"] = {{ site.includes_dir | jsonify }};
+			site["safe"] = {{ site.safe | jsonify }};
+			site["include"] = {{ site.include | jsonify }};
+			site["exclude"] = {{ site.exclude | jsonify }};
+			site["keep_files"] = {{ site.keep_files | jsonify }};
+			site["encoding"] = {{ site.encoding | jsonify }};
+			site["markdown_ext"] = {{ site.markdown_ext | jsonify }};
+			site["show_drafts"] = {{ site.show_drafts | jsonify }};
+			site["limit_posts"] = {{ site.limit_posts | jsonify }};
+			site["future"] = {{ site.future | jsonify }};
+			site["unpublished"] = {{ site.unpublished | jsonify }};
+			site["whitelist"] = {{ site.whitelist | jsonify }};
+			site["gems"] = {{ site.gems | jsonify }};
+			site["markdown"] = {{ site.markdown | jsonify }};
+			site["highlighter"] = {{ site.highlighter | jsonify }};
+			site["lsi"] = {{ site.lsi | jsonify }};
+			site["excerpt_separator"] = {{ site.excerpt_separator | jsonify }};
+			site["incremental"] = {{ site.incremental | jsonify }};
+			site["detach"] = {{ site.detach | jsonify }};
+			site["port"] = {{ site.port | jsonify }};
+			site["host"] = {{ site.host | jsonify }};
+			site["baseurl"] = {{ site.baseurl | jsonify }};
+			site["show_dir_listing"] = {{ site.show_dir_listing | jsonify }};
+			site["permalink"] = {{ site.permalink | jsonify }};
+			site["paginate_path"] = {{ site.paginate_path | jsonify }};
+			site["timezone"] = {{ site.timezone | jsonify }};
+			site["quiet"] = {{ site.quiet | jsonify }};
+			site["verbose"] = {{ site.verbose | jsonify }};
+			site["defaults"] = {{ site.defaults | jsonify }};
+			site["liquid"] = {{ site.liquid | jsonify }};
+			site["rdiscount"] = {{ site.rdiscount | jsonify }};
+			site["redcarpet"] = {{ site.redcarpet | jsonify }};
+			site["kramdown"] = {{ site.kramdown | jsonify }};
+			site["jailed"] = {{ site.jailed | jsonify }};
+			site["sass"] = {{ site.sass | jsonify }};
+			site["GH_ENV"] = {{ site.GH_ENV | jsonify }};
+			site["github"] = {{ site.github | jsonify }};
+			site["url"] = {{ site.url | jsonify }};
+			site["title"] = {{ site.title | jsonify }};
+			site["description"] = {{ site.description | jsonify }};
+			site["theme"] = {{ site.theme | jsonify }};
+			site["gist"] = {{ site.gist | jsonify }};
 
-				paginator = {{ paginator | jsonify }};
+			paginator = {{ paginator | jsonify }};
 
-				return {page, site, paginator}
+			return {page, site, paginator}
 
-			} catch (e) {
-				console.warn(e);
-			}
 		}
+
+		try {
+			window.data = getInitialData();
+		} catch (e) {
+			console.warn(e);
+		}
+
 	</script>
 
 </body>
