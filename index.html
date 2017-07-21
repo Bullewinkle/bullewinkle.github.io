@@ -38,7 +38,6 @@ title: welcome
 
 			site["data"] = {{ site.data | jsonify }};
 			site["time"] = {{ site.time | jsonify }};
-			site["pages"] = {{ site.pages | jsonify }};
 			site["posts"] = {{ site.posts | jsonify }};
 			site["documents"] = {{ site.documents | jsonify }};
 			site["tags"] = {{ site.tags | jsonify }};
@@ -85,14 +84,13 @@ title: welcome
 			site["kramdown"] = {{ site.kramdown | jsonify }};
 			site["jailed"] = {{ site.jailed | jsonify }};
 			site["sass"] = {{ site.sass | jsonify }};
-			site["gist"] = {{ site.gist | jsonify }};
 			site["GH_ENV"] = {{ site.GH_ENV | jsonify }};
 			site["github"] = {{ site.github | jsonify }};
 			site["url"] = {{ site.url | jsonify }};
 			site["title"] = {{ site.title | jsonify }};
 			site["description"] = {{ site.description | jsonify }};
 			site["theme"] = {{ site.theme | jsonify }};
-			site["related_posts"] = {{ site.related_posts | jsonify }};
+			site["gist"] = {{ site.gist | jsonify }};
 
 		} catch (e) {
 			console.warn(e);
