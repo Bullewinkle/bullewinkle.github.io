@@ -30,9 +30,69 @@ title: welcome
 
 	<script type="text/javascript">
 		try {
-			window.json = {{ site | jsonify | normalize_whitespace }};
 			window.page = {{ page | jsonify | normalize_whitespace }};
 			window.paginator = {{ paginator | jsonify | normalize_whitespace }};
+			window.site = {};
+
+			site["data"] = {{ site.data }};
+			site["time"] = {{ site.time }};
+			site["pages"] = {{ site.pages }};
+			site["posts"] = {{ site.posts }};
+			site["documents"] = {{ site.documents }};
+			site["tags"] = {{ site.tags }};
+			site["static_files"] = {{ site.static_files }};
+			site["categories"] = {{ site.categories }};
+			site["collections"] = {{ site.collections }};
+			site["html_pages"] = {{ site.html_pages }};
+			site["source"] = {{ site.source }};
+			site["destination"] = {{ site.destination }};
+			site["plugins_dir"] = {{ site.plugins_dir }};
+			site["layouts_dir"] = {{ site.layouts_dir }};
+			site["data_dir"] = {{ site.data_dir }};
+			site["includes_dir"] = {{ site.includes_dir }};
+			site["safe"] = {{ site.safe }};
+			site["include"] = {{ site.include }};
+			site["exclude"] = {{ site.exclude }};
+			site["keep_files"] = {{ site.keep_files }};
+			site["encoding"] = {{ site.encoding }};
+			site["markdown_ext"] = {{ site.markdown_ext }};
+			site["show_drafts"] = {{ site.show_drafts }};
+			site["limit_posts"] = {{ site.limit_posts }};
+			site["future"] = {{ site.future }};
+			site["unpublished"] = {{ site.unpublished }};
+			site["whitelist"] = {{ site.whitelist }};
+			site["gems"] = {{ site.gems }};
+			site["markdown"] = {{ site.markdown }};
+			site["highlighter"] = {{ site.highlighter }};
+			site["lsi"] = {{ site.lsi }};
+			site["excerpt_separator"] = {{ site.excerpt_separator }};
+			site["incremental"] = {{ site.incremental }};
+			site["detach"] = {{ site.detach }};
+			site["port"] = {{ site.port }};
+			site["host"] = {{ site.host }};
+			site["baseurl"] = {{ site.baseurl }};
+			site["show_dir_listing"] = {{ site.show_dir_listing }};
+			site["permalink"] = {{ site.permalink }};
+			site["paginate_path"] = {{ site.paginate_path }};
+			site["timezone"] = {{ site.timezone }};
+			site["quiet"] = {{ site.quiet }};
+			site["verbose"] = {{ site.verbose }};
+			site["defaults"] = {{ site.defaults }};
+			site["liquid"] = {{ site.liquid }};
+			site["rdiscount"] = {{ site.rdiscount }};
+			site["redcarpet"] = {{ site.redcarpet }};
+			site["kramdown"] = {{ site.kramdown }};
+			site["jailed"] = {{ site.jailed }};
+			site["sass"] = {{ site.sass }};
+			site["gist"] = {{ site.gist }};
+			site["GH_ENV"] = {{ site.GH_ENV }};
+			site["github"] = {{ site.github }};
+			site["url"] = {{ site.url }};
+			site["title"] = {{ site.title }};
+			site["description"] = {{ site.description }};
+			site["theme"] = {{ site.theme }};
+			site["related_posts"] = {{ site.related_posts };
+
 		} catch (e) {
 			console.warn(e);
 		}
