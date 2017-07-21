@@ -44,6 +44,7 @@ title: welcome
 		var json = ({{ site | jsonify }});
 		delete json.pages;
 		delete json.html_pages;
+		window.json = json;
 		document.write(JSON.stringify(json));
 	</script></pre>
 	<pre>site.time: {{ site.time }}</pre>
