@@ -41,9 +41,7 @@ title: welcome
 
 	<h2>Site</h2>
 	<pre>site: <script type="text/javascript">
-		var json = ({{ site | jsonify }});
-		delete json.pages;
-		delete json.html_pages;
+		var json = {{ site | jsonify }};
 		window.json = json;
 		document.write(JSON.stringify(json));
 	</script></pre>
