@@ -17,9 +17,11 @@ title: welcome
 	<h2>Repositories</h2>
 	<ul>
 		{% for repo in site.github.public_repositories %}
-		<li>
-			<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
-		</li>
+			{% if repo.has_pages %}
+				<li>
+					<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
+				</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 
@@ -36,13 +38,13 @@ title: welcome
 
 			site["data"] = {{ site.data | jsonify }};
 			site["time"] = {{ site.time | jsonify }};
+			site["pages"] = {{ site.pages | jsonify }};
 			site["posts"] = {{ site.posts | jsonify }};
 			site["documents"] = {{ site.documents | jsonify }};
 			site["tags"] = {{ site.tags | jsonify }};
 			site["static_files"] = {{ site.static_files | jsonify }};
 			site["categories"] = {{ site.categories | jsonify }};
 			site["collections"] = {{ site.collections | jsonify }};
-			site["html_pages"] = {{ site.html_pages | jsonify }};
 			site["source"] = {{ site.source | jsonify }};
 			site["destination"] = {{ site.destination | jsonify }};
 			site["plugins_dir"] = {{ site.plugins_dir | jsonify }};
