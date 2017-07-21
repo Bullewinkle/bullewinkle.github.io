@@ -45,7 +45,6 @@ title: welcome
 
 
 				site["data"] = {{ site.data | jsonify }};
-				site["pages"] = {{ site.pages | jsonify }};
 				site["time"] = {{ site.time | jsonify }};
 				site["posts"] = {{ site.posts | jsonify }};
 				site["documents"] = {{ site.documents | jsonify }};
@@ -101,7 +100,7 @@ title: welcome
 				site["theme"] = {{ site.theme | jsonify }};
 				site["gist"] = {{ site.gist | jsonify }};
 
-				paginator = {{ paginator | jsonify | normalize_whitespace }};
+				paginator = {{ paginator | jsonify }};
 
 				return {page, site, paginator}
 
