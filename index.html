@@ -33,11 +33,11 @@ title: welcome
 	<script type="text/javascript">
 		try {
 			window.page = {};
-			page["title"] = {{ page.title }};
-			page["dir"] = {{ page.dir }};
-			page["name"] = {{ page.name }};
-			page["path"] = {{ page.path }};
-			page["url"] = {{ page.url }};
+			page["title"] = {{ page.title | jsonify }};
+			page["dir"] = {{ page.dir | jsonify }};
+			page["name"] = {{ page.name | jsonify }};
+			page["path"] = {{ page.path | jsonify }};
+			page["url"] = {{ page.url | jsonify }};
 
 			window.site = {};
 			site["data"] = {{ site.data | jsonify }};
