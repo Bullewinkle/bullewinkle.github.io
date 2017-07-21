@@ -32,10 +32,14 @@ title: welcome
 
 	<script type="text/javascript">
 		try {
-			window.page = {{ page | jsonify | normalize_whitespace }};
-			window.paginator = {{ paginator | jsonify | normalize_whitespace }};
-			window.site = {};
+			window.page = {};
+			page["title"] = {{ page.title }};
+			page["dir"] = {{ page.dir }};
+			page["name"] = {{ page.name }};
+			page["path"] = {{ page.path }};
+			page["url"] = {{ page.url }};
 
+			window.site = {};
 			site["data"] = {{ site.data | jsonify }};
 			site["time"] = {{ site.time | jsonify }};
 			site["posts"] = {{ site.posts | jsonify }};
@@ -91,6 +95,8 @@ title: welcome
 			site["description"] = {{ site.description | jsonify }};
 			site["theme"] = {{ site.theme | jsonify }};
 			site["gist"] = {{ site.gist | jsonify }};
+
+			window.paginator = {{ paginator | jsonify | normalize_whitespace }};
 
 		} catch (e) {
 			console.warn(e);
