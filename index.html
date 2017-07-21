@@ -30,9 +30,9 @@ title: welcome
 
 	<script type="text/javascript">
 		try {
-			window.json = {{ site | jsonify }};
-			window.page = {{ page | jsonify }};
-			window.paginator = {{ paginator | jsonify }};
+			window.json = {{ site | jsonify | normalize_whitespace }};
+			window.page = {{ page | jsonify | normalize_whitespace }};
+			window.paginator = {{ paginator | jsonify | normalize_whitespace }};
 		} catch (e) {
 			console.warn(e);
 		}
