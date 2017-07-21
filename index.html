@@ -29,9 +29,13 @@ title: welcome
 
 
 	<script type="text/javascript">
-		window.json = {{ site | jsonify }};
-		window.page = {{ page | jsonify }};
-		window.paginator = {{ paginator | jsonify }};
+		try {
+			window.json = {{ site | jsonify }};
+			window.page = {{ page | jsonify }};
+			window.paginator = {{ paginator | jsonify }};
+		} catch (e) {
+			console.warn(e);
+		}
 	</script>
 
 </body>
