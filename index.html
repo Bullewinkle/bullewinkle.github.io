@@ -9,6 +9,12 @@ title: welcome
 	<meta charset="UTF-8">
 	<meta name="robots" content="none"/>
 	<title>Bullwinkle`s pages</title>
+	<style>
+		iframe	{
+			width: 100%;
+			height: 600px;
+		}
+	</style>
 </head>
 <body>
 	<h1><a href="/">Bullwinkle`s pages</a></h1>
@@ -17,11 +23,27 @@ title: welcome
 		{% for repo in site.github.public_repositories %}
 			{% if repo.has_pages %}
 				<li>
-					<a href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
+					<a repo href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }}</a>
 				</li>
 			{% endif %}
 		{% endfor %}
 	</ul>
+
+	<iframe id="page-frame" src="" frameborder="0"></iframe>
+
+
+	<script type="text/javascript">
+		const repoLinks = document.querySelectorAll('[repo]');
+		const iframe = document.querySelector('#page-frame');
+
+		repoLinks.forEach((el)=>{
+			el.addEventListener('click',(e)=>{
+				e.preventDefault();
+				const href = el.getAttribute('href');
+				iframe.src = href;
+			})
+		});
+	</script>
 
 
 	<script type="text/javascript">
