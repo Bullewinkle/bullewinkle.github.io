@@ -4,25 +4,26 @@ title: Welcome, stranger
 ---
 <h1><a href="/">{{ page.title }}</a></h1>
 
+Z
 <ul>
   {% for repo in site.github.public_repositories %}
     <li>
-      <a class="repository-link" href="{{ site.github.url }}/{{ repo.name }}/">{{ repo.name }} →</a>
+      <a class="repository-link" target="_blank" href="{{ site.github.url }}/">{{ repo.name }} →</a>
     </li>
   {% endfor %}
 </ul>
 
-<iframe id="page-frame" src="" style="width: 100%;height: 600px;" frameborder="0"></iframe>
+<!--<iframe id="page-frame" src="" style="width: 100%;height: 600px;" frameborder="0"></iframe>-->
 
 
-<script type="text/javascript">
-  const repoLinks = document.querySelectorAll('.repository-link');
-  const iframe    = document.querySelector('#page-frame');
+<!--<script type="text/javascript">-->
+<!--  const repoLinks = document.querySelectorAll('.repository-link');-->
+<!--  const iframe    = document.querySelector('#page-frame');-->
 
-  repoLinks.forEach((el) => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      iframe.src = el.getAttribute('href');
-    })
-  });
-</script>
+<!--  repoLinks.forEach((el) => {-->
+<!--    el.addEventListener('click', (e) => {-->
+<!--      e.preventDefault();-->
+<!--      iframe.src = el.getAttribute('href');-->
+<!--    })-->
+<!--  });-->
+<!--</script>-->
