@@ -2,14 +2,7 @@
 layout: default
 title: Welcome, stranger
 ---
-<style>
-  iframe {
-    width: 100%;
-    height: 600px;
-  }
-</style>
-
-<h1><a href="/">Bullwinkle`s pages</a></h1>
+<h1><a href="/">{{ page.title }}</a></h1>
 
 <ul>
   {% for repo in site.github.public_repositories %}
@@ -19,7 +12,7 @@ title: Welcome, stranger
   {% endfor %}
 </ul>
 
-<iframe id="page-frame" src="" frameborder="0"></iframe>
+<iframe id="page-frame" src="" style="width: 100%;height: 600px;" frameborder="0"></iframe>
 
 
 <script type="text/javascript">
