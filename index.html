@@ -4,11 +4,10 @@ title: Welcome, stranger
 ---
 <h1><a href="/">{{ page.title }}</a></h1>
 
-Z
 <ul>
   {% for repo in site.github.public_repositories %}
     <li>
-      <a class="repository-link" target="_blank" href="{{ site.github.url }}/">{{ repo.name }} →</a>
+      <a class="repository-link" target="_blank" href="{{ repo.url }}/">{{ repo.name }} →</a>
     </li>
   {% endfor %}
 </ul>
