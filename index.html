@@ -48,10 +48,7 @@ title: welcome
 <script type="text/javascript">
 
 		function getInitialData () {
-			var page = {};
-      var _page = {{ page | jsonify }};
-			var site = {};
-			var _site = {{ site | jsonify }};
+			var page = {{ page | jsonify }};
 			var paginator = {{ paginator | jsonify }};
       //
 			//page["title"] = {{ page.title | jsonify }};
