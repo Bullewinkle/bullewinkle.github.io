@@ -1,4 +1,23 @@
+<div>Pages</div>
 <nav>
   <a href="/">Home</a>
   <a href="/pages/about.html">About</a>
+  <a href="/pages/all-posts.html">All posts</a>
 </nav>
+
+<div>Posts</div>
+<nav>
+  {% for post in site.posts %}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</nav>
+
+<div>Categories</div>
+{% for category in site.categories %}
+<h3>{{ category[0] }}</h3>
+<nav>
+  {% for post in category[1] %}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</nav>
+{% endfor %}
