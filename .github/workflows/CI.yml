@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     paths:
-    - angular-submodule-page-1/**
+    - './angular-submodule-page-1/**'
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - working-directory: ./angular-submodule-page-1      
+    - working-directory: './angular-submodule-page-1'
       run: |
         npm ci
         npm build
