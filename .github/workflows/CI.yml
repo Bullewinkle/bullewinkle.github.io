@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'angular-submodule-page-1/**'
 
 jobs:
   build:
