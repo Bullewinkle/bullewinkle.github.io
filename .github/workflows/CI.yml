@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - working-directory: ./angular-submodule-page-1
     - name: Checkouting...
       uses: actions/checkout@v1
       with:
         submodules: true
-    - uses: actions/setup-node@v1
+    - name: Bulding...
+      uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: |
+    - working-directory: ./angular-submodule-page-1      
+      run: |
         npm ci
         npm build
-        
