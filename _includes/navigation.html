@@ -74,11 +74,8 @@
 <h3>Public repositories</h3>
 <nav>
   {% for repository in site.github.public_repositories %}
-  <div style="padding: 20px;">
-    <div>pages: {{ repository.has_pages }}</div>
-    <a href="{{ repository.homepage }}">{{ repository.name }}</a>
-    <a href="{{ repository.url }}">{{ repository.name }}</a>
-    <a href="{{ repository.html_url }}">{{ repository.name }}</a>
-  </div>
+    {% if repository.homepage %}
+      <a href="{{ repository.homepage }}">{{ repository.name }}</a>
+    {% endif %}
   {% endfor %}
 </nav>
