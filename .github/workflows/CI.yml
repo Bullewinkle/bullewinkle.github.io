@@ -7,10 +7,4 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkouting...
-      uses: actions/checkout@v1
-      with:
-        submodules: true
-        token: ${{ secrets.GITHUB_PAT }}
-        lfs: true
+
