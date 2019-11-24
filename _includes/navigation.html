@@ -75,7 +75,7 @@
 <nav>
   {% for repository in site.github.public_repositories %}
     {% if repository.has_pages %}
-      <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+      <a href="{{ repository.url }}">{{ repository.name }}</a>
     {% endif %}
   {% endfor %}
 </nav>
