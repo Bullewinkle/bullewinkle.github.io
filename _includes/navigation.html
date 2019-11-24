@@ -74,6 +74,9 @@
 <h3>Public repositories</h3>
 <nav>
   {% for repository in site.github.public_repositories %}
-  <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+  <div style="padding: 20px;">
+    <a href="{{ repository.url }}">{{ repository.name }}</a>
+    <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+  </div>
   {% endfor %}
 </nav>
