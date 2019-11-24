@@ -20,6 +20,22 @@
   }
 </style>
 
+<div><a href="{{ site.github.url }}">site.github.url</a></div>
+
+<h3>Collections</h3>
+<nav>
+  {% for collection in site.collections  %}
+  <a href="{{ collection.url }}">{{ collection.title }}</a>
+  {% endfor %}
+</nav>
+
+<h3>Documents</h3>
+<nav>
+  {% for doc in site.documents %}
+  <a href="{{ doc.url }}">{{ doc.title }}</a>
+  {% endfor %}
+</nav>
+
 <h3>Pages</h3>
 <nav>
   {% for page in site.pages %}
@@ -53,3 +69,11 @@
   {% endfor %}
 </nav>
 {% endfor %}
+
+
+<h3>Public repositories</h3>
+<nav>
+  {% for repository in site.github.public_repositories %}
+  <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+  {% endfor %}
+</nav>
