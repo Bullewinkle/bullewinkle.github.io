@@ -1,9 +1,6 @@
 name: CI
 
-on:
-  push:
-    paths:
-    - './angular-submodule-page-1/**'
+on: [push]
 
 jobs:
   build:
@@ -15,11 +12,5 @@ jobs:
       uses: actions/checkout@v1
       with:
         submodules: true
-    - name: Bulding...
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - working-directory: './angular-submodule-page-1'
-      run: |
-        npm ci
-        npm build
+        token: ${{ secrets.GITHUB_PAT }}
+        lfs: true
