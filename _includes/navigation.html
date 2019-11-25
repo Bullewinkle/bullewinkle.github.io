@@ -22,6 +22,15 @@
 
 <div><a href="{{ site.github.url }}">site.github.url</a></div>
 
+<h3>Github pages</h3>
+<nav>
+  {% for repository in site.github.public_repositories %}
+  {% if repository.has_pages %}
+  <a href="https://{{ repository.owner.login }}.github.io/{{ repository.name }}">{{ repository.name }}</a>
+  {% endif %}
+  {% endfor %}
+</nav>
+
 <h3>Collections</h3>
 <nav>
   {% for collection in site.collections  %}
@@ -69,13 +78,3 @@
   {% endfor %}
 </nav>
 {% endfor %}
-
-
-<h3>Public repositories</h3>
-<nav>
-  {% for repository in site.github.public_repositories %}
-    {% if repository.has_pages %}
-      <a href="https://{{ repository.owner.login }}.github.io/{{ repository.name }}">{{ repository.name }}</a>
-    {% endif %}
-  {% endfor %}
-</nav>
