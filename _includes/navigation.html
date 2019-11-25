@@ -76,6 +76,7 @@
   {% for repository in site.github.public_repositories %}
     {% if repository.has_pages %}
       <a href="{{ repository.url }}">{{ repository.name }}</a>
+      <a href="https://{{ repository.pages_hostname }}/{{ repository.baseurl }}">{{ repository.name }}</a>
     {% endif %}
   {% endfor %}
 </nav>
